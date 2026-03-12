@@ -6,7 +6,7 @@ The model generates 64x64 pixel art images. I first trained it unconditionally, 
 
 Project structure:
 - `configs/` : training configs
-- `deprecated/`: dirty notebooks, kept for reference
+- `deprecated/`: deprected notebooks, kept for reference
 - `models/` : model classes
 - `notebook/` : training and sampling notebooks (used on Kaggle)
 - `training/` : Trainer class
