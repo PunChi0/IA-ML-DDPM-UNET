@@ -35,3 +35,13 @@ Training loss curve over the course of the diffusion model training.
 **Prompt:** "a character with dark green glasses and a yeti-shaped head and a teal-colored body on a warm background"
 
 ![Yeti character](figs/yeti.png)
+
+### Conclusion
+
+The model generalizes decently : it follows the prompt structure and produces recognizable characters. But it stays limited: it can pick up individual attributes but can't really mix them (like combining two head shapes).
+
+The custom tokenizer is the major problem. It only knows words from the training set, so anything a bit different breaks the conditioning. Switching to a pretrained tokenizer/encoder would help a lot.
+
+I also never tracked validation loss during training, which makes it hard to know if the model overfit at some point.
+
+One good point, there is no blurriness, generations are pretty good, which is a good sign for the diffusion process.
