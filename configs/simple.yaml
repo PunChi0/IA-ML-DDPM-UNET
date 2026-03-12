@@ -1,0 +1,20 @@
+training:
+  epochs: 150
+  batch_size: 254
+  T: 1000
+  checkpoint_dir: "./checkpoints"
+
+model:
+  image_size: 64
+  in_channels: 3
+  base_channels: 32
+  channel_mults: [1, 2, 4, 8]
+  n_heads: 4
+  emb_dim: 128
+  context_dim: 128
+  lr: 5.0e-4
+
+text_encoder:
+  max_len: 30
+  n_layers: 4
+  lr: 2.0e-4
